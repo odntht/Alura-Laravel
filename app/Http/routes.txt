@@ -1,0 +1,5 @@
+o arquivo routes.php está na pasta ../routes/web.php
+basta comparar
+
+https://laravel.com/docs/5.0/routing
+https://laravel.com/docs/5.8/routing
