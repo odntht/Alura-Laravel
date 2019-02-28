@@ -3,14 +3,12 @@
 namespace estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use estoque\Produto;
 
 class ProdutoController extends Controller {
 	public function lista() {
-		$html = 'LISTAGEM DE PRODUTOS';
 		$produtos = DB::select ( 'select * from produtos' );
-		foreach ( $produtos as $p ) {
-			$html .= "<br/> Nome: " . $p->nome;
-		}
-		return $html;
+		
+		return view ( 'listagem' )->with ( 'produtos', $produtos );
 	}
 }
