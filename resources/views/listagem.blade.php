@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="/css/app.css">
-<title>Controle de Estoque</title>
+@extends('principal')
+
+@section('conteudo')
+
+<title>Listagem de Produtos</title>
 </head>
 <body>
 	<div class="container">
@@ -14,12 +14,12 @@
 				<td><?= $p->valor?></td>
 				<td><?= $p->descricao?></td>
 				<td><?= $p->quantidade?></td>
-				<td><a href="/produtos/mostra/<?= $p->id?>">
-				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				<td><a href="/produtos/mostra/<?= $p->id?>"> <span
+						class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				</a></td>
 			</tr>
 		<?php endforeach?>
 	</table>
 	</div>
-</body>
-</html>
+
+@stop	
