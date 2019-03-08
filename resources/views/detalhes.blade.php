@@ -5,8 +5,7 @@
 <body>
 	<div class="container">
 		<table class="table table-striped table-bordered table-hover">
-			<h1>Detalhes do produto : {{ $p->nome}} </h1>
-
+			<h1>Detalhes do produto : {{ $p->nome}}</h1>
 			<tr>
 				<td><b>Descricao:</b></td>
 				<td>{{ $p->descricao }}</td>
