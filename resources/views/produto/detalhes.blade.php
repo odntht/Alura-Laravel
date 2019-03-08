@@ -1,8 +1,6 @@
-@extends('principal') @section('conteudo')
+@extends('layout.principal') @section('conteudo')
 
-<title>Controle de Estoque</title>
-</head>
-<body>
+
 	<div class="container">
 		<table class="table table-striped table-bordered table-hover">
 			<h1>Detalhes do produto : {{ $p->nome}}</h1>
@@ -12,11 +10,12 @@
 			</tr>
 			<tr>
 				<td><b>Valor:</b></td>
-				<td>{{ $p->valor }}</td>
+				<td>R$ {{ $p->valor }}</td>
 			</tr>
 			<tr>
 				<td><b>Quantidade:</b></td>
-				<td>{{ $p->quantidade }}</td>
+				<td>{{$p->quantidade}} {{ $p->quantidade <= 1 ? ' item' : ' itens'}}
+				</td>
 			</tr>
 
 		</table>

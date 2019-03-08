@@ -15,5 +15,6 @@
 		} );
 		
 		Route::get ( '/produtos', 'ProdutoController@lista' ); //Rota que direciona pras listas de produtos
-		
 		Route::get ( '/produtos/mostra/{id}', 'ProdutoController@mostra' ); //Rota que direciona pros detalhes dos produtos.
+		Route::get ( '/produtos/novo', 'ProdutoController@novo' ); //Rota que direciona pro form de add produto.
+		Route::get ( '/produtos/novo', 'ProdutoController@novo' ); //Rota que direciona pros detalhes dos produtos.
