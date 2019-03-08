@@ -14,7 +14,7 @@
 <table class="table table-striped table-bordered table-hover">
 	<tr>
 		<td><b>Nome</b></td>
-		<td><b>Valor (R$)</b></td>
+		<td><b>Valor</b></td>
 		<td><b>Descricao</b></td>
 		<td><b>Quantidade</b></td>
 		<td><b>Detalhar</b></td>
@@ -22,7 +22,7 @@
 	@foreach ($produtos as $p)
 	<tr class="{{$p->quantidade <= 1 ? 'danger' : ''}}">
 		<td>{{$p->nome}}</td>
-		<td>{{$p->valor}}</td>
+		<td>{{'R$ '. number_format($p->valor , 2, ',', '.')}}</td>
 		<td>{{$p->descricao}}</td>
 		<td>{{$p->quantidade}}</td>
 		<td><a href="/produtos/mostra/{{$p->id}}"> <span
